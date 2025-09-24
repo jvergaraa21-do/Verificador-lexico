@@ -30,7 +30,7 @@
         </header>
 
         <main class="max-w-3xl mx-auto space-y-8">
-            <!-- Email Verification -->
+            <!-- Verificacion de email -->
             <div class="bg-white rounded-xl shadow-md p-6" data-aos="fade-up">
                 <div class="flex items-center mb-4">
                     <i data-feather="mail" class="text-indigo-500 mr-2"></i>
@@ -52,7 +52,7 @@
                 </div>
             </div>
 
-            <!-- Hexadecimal Verification -->
+            <!-- Verificacion Hexadecimal n -->
             <div class="bg-white rounded-xl shadow-md p-6" data-aos="fade-up" data-aos-delay="100">
                 <div class="flex items-center mb-4">
                     <i data-feather="hash" class="text-indigo-500 mr-2"></i>
@@ -74,7 +74,7 @@
                 </div>
             </div>
 
-            <!-- Decimal Verification -->
+            <!-- Verificacion Decimal  -->
             <div class="bg-white rounded-xl shadow-md p-6" data-aos="fade-up" data-aos-delay="200">
                 <div class="flex items-center mb-4">
                     <i data-feather="percent" class="text-indigo-500 mr-2"></i>
@@ -99,7 +99,7 @@
     </div>
 
     <script>
-        // Initialize animations and icons
+        // animaciones y iconos
         AOS.init();
         feather.replace();
 
@@ -111,10 +111,10 @@
             
             const email = input.value.trim();
             
-            // Regex for curnvirtual.edu.co: lowercase letters ending with 1-2 digits
+            // Scrip verificacion email 1
             const regex1 = /^[a-z]+\d{1,2}@curnvirtual\.edu\.co$/;
             
-            // Regex for curn.edu.co: starts with vowel, contains . or _, followed by letters
+            // Scrip verificacion email 2
             const regex2 = /^[aeiou][a-z]*[._][a-z]*@curn\.edu\.co$/;
             
             const isValid = regex1.test(email) || regex2.test(email);
@@ -147,7 +147,7 @@
             
             const hex = input.value.trim();
             
-            // Regex for 3 or 6 digit hex with #
+            // Scrip hexadecimal
             const regex = /^#[0-9A-Fa-f]{3}([0-9A-Fa-f]{3})?$/;
             
             const isValid = regex.test(hex);
@@ -180,7 +180,7 @@
             
             const decimal = input.value.trim();
             
-            // Regex for decimal between 0,0 and 5,0 with comma
+            // Scrip numero decimal
             const regex = /^[0-4],\d$|^5,0$/;
             
             const isValid = regex.test(decimal);
@@ -205,7 +205,7 @@
             feather.replace();
         }
 
-        // Add event listeners for Enter key
+        // input del usuario
         document.getElementById('emailInput').addEventListener('keypress', function(e) {
             if (e.key === 'Enter') verifyEmail();
         });
@@ -219,4 +219,5 @@
         });
     </script>
 </body>
+
 </html>
